@@ -1,0 +1,52 @@
+# Teacher Portal Project Setup Instructions
+
+## ✅ 1. Check Python & Pip
+Make sure Python and pip are installed:
+```
+python --version
+pip --version
+```
+
+## ✅ 2. Create and Activate Virtual Environment
+```
+python -m venv myworld
+.\myworld\Scripts\ctivate
+```
+
+## ✅ 3. Install Django
+```
+pip install django
+```
+
+## ✅ 4. Start Django Project
+```
+django-admin startproject teacher_portal .
+```
+
+## ✅ 5. Make Initial Migrations
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+
+## ✅ 6. Create Teacher User via Shell
+```
+python manage.py shell
+```
+Inside shell:
+```python
+from portal.models import Teacher
+Teacher.objects.create(username="admin", password="admin")
+exit()
+```
+
+## ✅ 7. Run the Server
+```
+python manage.py runserver
+```
+
+Visit: http://127.0.0.1:8000/
+
+Login with:
+- Username: admin
+- Password: admin
